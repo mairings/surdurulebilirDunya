@@ -10,9 +10,17 @@ namespace AnimalEscape.Movement
         public Transform ConnectNode;
         void Update()
         {
-            transform.position = new Vector3(Mathf.Lerp(transform.position.x, ConnectNode.position.x,Time.deltaTime * 10), 
+            if (ConnectNode != null)
+            {
+                transform.position = new Vector3(Mathf.Lerp(transform.position.x, ConnectNode.position.x, Time.deltaTime * 10),
                 transform.position.y,
-                ConnectNode.position.z + 1 );
+                ConnectNode.position.z + 1);
+            }
+            else
+            {
+                transform.position = transform.position;
+            }
+            
         }
     }
 }

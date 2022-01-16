@@ -11,6 +11,9 @@ TagManager:
   - Door
   - Veteriner
   - Dead
+  - Orman
+  - kafes
+  - Obstacle
   layers:
   - Default
   - TransparentFX

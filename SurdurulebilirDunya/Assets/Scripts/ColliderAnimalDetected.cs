@@ -16,7 +16,26 @@ namespace AnimalEscape.Movement
             else if (other.tag == "Dead")
             {
                 GetComponent<NodeMovement>().ConnectNode.gameObject.AddComponent<CollectController>();
+                
                 Destroy(this.gameObject);
+            }
+            else if (other.tag == "kafes")
+            {
+                other.transform.gameObject.SetActive(false);
+              GetComponent<NodeMovement>().ConnectNode.gameObject.AddComponent<CollectController>();
+                gameObject.SetActive(false);
+            }
+            else if (other.tag == "Orman")
+            {
+                GetComponent<NodeMovement>().ConnectNode.gameObject.AddComponent<CollectController>();
+                PlayerPrefs.SetInt("saveAnimals", PlayerPrefs.GetInt("saveAnimals") + 1);
+                Destroy(this.gameObject);
+            }
+            else if (other.tag == "Obstacle")
+            {
+                other.transform.gameObject.SetActive(false);
+                GetComponent<NodeMovement>().ConnectNode.gameObject.AddComponent<CollectController>();
+                gameObject.SetActive(false);
             }
         }
     }
