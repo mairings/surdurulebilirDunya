@@ -8,6 +8,9 @@ TagManager:
   - Collect
   - Cellected
   - Collected
+  - Door
+  - Veteriner
+  - Dead
   layers:
   - Default
   - TransparentFX
